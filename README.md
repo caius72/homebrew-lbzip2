@@ -22,9 +22,10 @@ brew tap caius72/lbzip2
 brew install lbzip2
 ```
 
-Homebrew core also ships an `lbzip2` formula (upstream 2.5).  The two cannot be
-installed at the same time; `brew uninstall lbzip2` first if you already have
-core's.
+Homebrew core dropped its own `lbzip2` formula: disabled on 2025-07-07 as
+unmaintained, removed on 2026-07-08.  This tap replaces it.  If a copy from
+before the removal is still installed, `brew uninstall lbzip2` first, since the
+two cannot occupy the name at once.
 
 Or, in a `brew bundle` `Brewfile`:
 
