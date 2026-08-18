@@ -1,8 +1,8 @@
 class Lbzip2 < Formula
   desc "Parallel, SMP-based, bzip2-compatible compression utility"
   homepage "https://github.com/caius72/lbzip2"
-  url "https://github.com/caius72/lbzip2/archive/refs/tags/v2.6.2.tar.gz"
-  sha256 "96cb07b4ac8a695cfa2846c038e939d21477717c63e551e504f5b57288a8d1b6"
+  url "https://github.com/caius72/lbzip2/archive/refs/tags/v2.6.3.tar.gz"
+  sha256 "681de92711a8a6efd7cedfc050ce3f7bf750d243ea92b11441147696bb47827f"
   license "GPL-3.0-or-later"
   head "https://github.com/caius72/lbzip2.git", branch: "master"
 
@@ -30,6 +30,6 @@ class Lbzip2 < Formula
     system bin/"lbunzip2", "payload.bz2"
     assert_equal "hello world " * 500, (testpath/"payload").read
 
-    assert_match "lbzip2 version 2.6.2", shell_output("#{bin}/lbzip2 --version")
+    assert_match "lbzip2 version 2.6.3", shell_output("#{bin}/lbzip2 --version")
   end
 end
